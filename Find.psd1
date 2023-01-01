@@ -6,7 +6,7 @@
   CompanyName = 'v77 Development'
   Copyright = '(c) 2023 v77 Development. All rights reserved.'
   Description = 'Search files by creation date and last modified date.'
-  PowerShellVersion = '7.2'
+  PowerShellVersion = '7.1'
   FunctionsToExport = @('Find-CreationTime', 'Find-LastWriteTime')
   CmdletsToExport = @()
   AliasesToExport = @()
