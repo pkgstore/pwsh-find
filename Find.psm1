@@ -9,17 +9,17 @@ function Find-CreationTime() {
 
   Param(
     [Parameter(Mandatory, HelpMessage="")]
-    [Alias("P", "Path")]
+    [Alias('P', 'Path')]
     [string]$P_Path,
 
     [Parameter(Mandatory, HelpMessage="Creation expired time (in seconds). E.g.: '5270400'. Default: 61 day (5270400 sec.).")]
-    [Alias("T", "Time")]
+    [Alias('T', 'Time')]
     [long]$P_Time = 5270400
   )
 
-  Get-ChildItem -Path "$($P_Path)" -Recurse
+  Get-ChildItem -Path "${P_Path}" -Recurse
     | Sort-Object -Property "LastAccessTime"
-    | Where-Object { (-not $_.PSIsContainer) -and ($_.CreationTime -gt (Get-Date).AddSeconds(-$($P_Time))) }
+    | Where-Object { ( -not $_.PSIsContainer ) -and ( $_.CreationTime -gt (Get-Date).AddSeconds( -${P_Time} ) ) }
 }
 
 function Find-LastWriteTime() {
@@ -33,15 +33,15 @@ function Find-LastWriteTime() {
 
   Param(
     [Parameter(Mandatory, HelpMessage="")]
-    [Alias("P", "Path")]
+    [Alias('P', 'Path')]
     [string]$P_Path,
 
     [Parameter(Mandatory, HelpMessage="Last write expired time (in seconds). E.g.: '5270400'. Default: 61 day ('5270400' sec.).")]
-    [Alias("T", "Time")]
+    [Alias('T', 'Time')]
     [long]$P_Time = 5270400
   )
 
-  Get-ChildItem -Path "$($P_Path)" -Recurse
+  Get-ChildItem -Path "${P_Path}" -Recurse
     | Sort-Object -Property "LastAccessTime"
-    | Where-Object { (-not $_.PSIsContainer) -and ($_.LastWriteTime -gt (Get-Date).AddSeconds(-$($P_Time))) }
+    | Where-Object { ( -not $_.PSIsContainer ) -and ( $_.LastWriteTime -gt (Get-Date).AddSeconds( -${P_Time} ) ) }
 }
