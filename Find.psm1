@@ -16,11 +16,11 @@ function Find-CreationTime() {
   Param(
     [Parameter(Mandatory, HelpMessage="Path to directory.")]
     [Alias('P')]
-    [string]$Path,
+    [string]${Path},
 
     [Parameter(Mandatory, HelpMessage="Creation expired time (in seconds). E.g.: '5270400'. Default: '5270400' (61 day - 5270400 sec.).")]
     [Alias('T')]
-    [long]$Time = 5270400
+    [long]${Time} = 5270400
   )
 
   Get-ChildItem -Path "${Path}" -Recurse
@@ -46,11 +46,11 @@ function Find-LastWriteTime() {
   Param(
     [Parameter(Mandatory, HelpMessage="Path to directory.")]
     [Alias('P')]
-    [string]$Path,
+    [string]${Path},
 
     [Parameter(Mandatory, HelpMessage="Last write expired time (in seconds). E.g.: '5270400'. Default: '5270400' (61 day - 5270400 sec.).")]
     [Alias('T')]
-    [long]$Time = 5270400
+    [long]${Time} = 5270400
   )
 
   Get-ChildItem -Path "${Path}" -Recurse
