@@ -3,12 +3,12 @@ function Find-CreationTime() {
     .SYNOPSIS
       Search files by creation date (seconds).
     .DESCRIPTION
-      -P
-        Path to directory.
-      -T
-        Creation expired time (in seconds).
-        E.g.: '5270400'.
-        Default: '5270400' (61 day - 5270400 sec.).
+    .PARAMETER P
+      Path to directory.
+    .PARAMETER T
+      Creation expired time (in seconds).
+      E.g.: '5270400'.
+      Default: '5270400' (61 day - 5270400 sec.).
   #>
 
   [CmdletBinding()]
@@ -33,12 +33,12 @@ function Find-LastWriteTime() {
     .SYNOPSIS
       Search files by last modified date (seconds).
     .DESCRIPTION
-      -P
-        Path to directory.
-      -T
-        Last write expired time (in seconds).
-        E.g.: '5270400'.
-        Default: '5270400' (61 day - 5270400 sec.).
+    .PARAMETER P
+      Path to directory.
+    .PARAMETER T
+      Last write expired time (in seconds).
+      E.g.: '5270400'.
+      Default: '5270400' (61 day - 5270400 sec.).
   #>
 
   [CmdletBinding()]
