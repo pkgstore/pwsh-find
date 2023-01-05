@@ -1,5 +1,5 @@
 @{
-  RootModule = 'Find.psm1'
+  RootModule = 'PkgStore.Find.psm1'
   ModuleVersion = '1.0.0'
   GUID = '90b5df0b-3fd1-4ce4-bca4-8d62e50f322d'
   Author = 'Kitsune Solar'
