@@ -2,9 +2,12 @@ function Find-CreationTime() {
   <#
     .SYNOPSIS
       Search files by creation date (seconds).
+
     .DESCRIPTION
+
     .PARAMETER P
       Path to directory.
+
     .PARAMETER T
       Creation expired time (in seconds).
       E.g.: '5270400'.
@@ -32,9 +35,12 @@ function Find-LastWriteTime() {
   <#
     .SYNOPSIS
       Search files by last modified date (seconds).
+
     .DESCRIPTION
+
     .PARAMETER P
       Path to directory.
+
     .PARAMETER T
       Last write expired time (in seconds).
       E.g.: '5270400'.
