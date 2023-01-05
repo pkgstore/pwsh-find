@@ -5,13 +5,15 @@ function Find-CreationTime() {
 
     .DESCRIPTION
 
-    .PARAMETER P
+    .PARAMETER Path
       Path to directory.
+      Alias: '-P'.
 
-    .PARAMETER T
+    .PARAMETER Time
       Creation expired time (in seconds).
       E.g.: '5270400'.
       Default: '5270400' (61 day - 5270400 sec.).
+      Alias: '-T'.
   #>
 
   [CmdletBinding()]
@@ -38,13 +40,15 @@ function Find-LastWriteTime() {
 
     .DESCRIPTION
 
-    .PARAMETER P
+    .PARAMETER Path
       Path to directory.
+      Alias: '-P'.
 
-    .PARAMETER T
+    .PARAMETER Time
       Last write expired time (in seconds).
       E.g.: '5270400'.
       Default: '5270400' (61 day - 5270400 sec.).
+      Alias: '-T'.
   #>
 
   [CmdletBinding()]
