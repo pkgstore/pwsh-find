@@ -44,11 +44,11 @@ function Find-LastWriteTime() {
   [CmdletBinding()]
 
   Param(
-    [Parameter(Mandatory, HelpMessage="Path to directory.")]
+    [Parameter(Mandatory)]
     [Alias('P')]
     [string]${Path},
 
-    [Parameter(Mandatory, HelpMessage="Last write expired time (in seconds). E.g.: '5270400'. Default: '5270400' (61 day - 5270400 sec.).")]
+    [Parameter(Mandatory)]
     [Alias('T')]
     [long]${Time} = 5270400
   )
