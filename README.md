@@ -3,5 +3,5 @@
 ## Install
 
 ```powershell
-Install-PSM -Names 'Find'
+Install-PSM -N 'Find'
 ```
