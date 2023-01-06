@@ -1,4 +1,4 @@
-# PowerShell Find Module
+# PowerShell "Find" Module
 
 ## Install
 
