@@ -14,16 +14,25 @@ function Find-CreationTime() {
       E.g.: '5270400'.
       Default: '5270400' (61 day - 5270400 sec.).
       Alias: '-T'.
+
+    .EXAMPLE
+      Find-CreationTime -P 'D:\Storage' -T 2592000
+
+    .LINK
+      Package Store: https://github.com/pkgstore
+
+    .NOTES
+      Author: Kitsune Solar <mail@kitsune.solar>
   #>
 
   [CmdletBinding()]
 
   Param(
-    [Parameter(Mandatory, HelpMessage="Path to directory.")]
+    [Parameter(Mandatory)]
     [Alias('P')]
     [string]${Path},
 
-    [Parameter(Mandatory, HelpMessage="Creation expired time (in seconds). E.g.: '5270400'. Default: '5270400' (61 day - 5270400 sec.).")]
+    [Parameter(Mandatory)]
     [Alias('T')]
     [long]${Time} = 5270400
   )
@@ -49,6 +58,15 @@ function Find-LastWriteTime() {
       E.g.: '5270400'.
       Default: '5270400' (61 day - 5270400 sec.).
       Alias: '-T'.
+
+    .EXAMPLE
+      Find-LastWriteTime -P 'D:\Storage' -T 2592000
+
+    .LINK
+      Package Store: https://github.com/pkgstore
+
+    .NOTES
+      Author: Kitsune Solar <mail@kitsune.solar>
   #>
 
   [CmdletBinding()]
