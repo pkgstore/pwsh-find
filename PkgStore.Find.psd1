@@ -7,7 +7,13 @@
   Copyright = '(c) 2023 v77 Development. All rights reserved.'
   Description = 'Search files by creation date and last modified date.'
   PowerShellVersion = '7.1'
+  RequiredModules = @('PkgStore.Kernel')
   FunctionsToExport = @('Find-CreationTime', 'Find-LastWriteTime')
-  CmdletsToExport = @()
-  AliasesToExport = @()
+  PrivateData = @{
+    PSData = @{
+      Tags = @('pwsh', 'find')
+      LicenseUri = 'https://github.com/pkgstore/pwsh-find/blob/main/LICENSE'
+      ProjectUri = 'https://github.com/pkgstore/pwsh-find'
+    }
+  }
 }
